@@ -1,57 +1,129 @@
 body {
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 *{
     box-sizing: border-box;
 }
-
 hr {
-    margin: 0px;
+    margin: 5px auto;
 }
 .container {
-    max-width: 500px;
+    max-width: 800px;
     margin: 20px auto;
-    cursor: pointer;
 }
 .component {
     color: blue;
+    cursor: pointer;
 }
-.component-title {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    line-height: 50px;
+.component-item {
+    position: relative;
 }
-.component:hover {
-    color: black;
-}
-.component-input:hover + .mem-img {
-    display: block;
-}
-
 .component-input {
     width: 0;
     height: 0;
     appearance: none;
+    position: absolute;
 }
-.component-input:checked + .mem-img {
+.component-title {
     display: block;
-}
-.mem-img {
-    display: none;
-    max-width: 70%;
-    margin: 0 auto 10px auto;
-}
-.mem-img:hover {
-    display: block;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
 }
 .plus {
-    display: none;
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 13px;
+    z-index: -1;
     transform: rotate(45deg);
+    transition: all 0.7s;
+}
+.mem-img {
+    display: block;
+    height: 0;
+    max-width: 80%;
+    margin: 0 auto 0 auto;
+    transition: height 0.7s;
+    overflow: hidden;
+}
+.component:hover {
+    color: black;
+}
+.component-input:hover ~ .mem-img {
+    display: block;
+}
+.component-input:hover ~ .mem-img {
+    height: 300px;
+}
+.component-input:hover ~ .plus{
+    color: black;
+    transform: rotate(0deg);
+}
+.component-input:checked ~ .plus{
+    color: black;
+    transform: rotate(0deg);
+}
+.component-input:checked + .component-title {
+    color: black;
+}
+.component-input:checked ~ .mem-img {
+    height: 300px;
 }
 
-.component:hover .plus{
-    display: inline;
+@media (max-width: 1200px) {
+    .container {
+        max-width: 600px;
+    }
+    body {
+        font-size: 20px;
+    }
+    .component-title {
+        height: 50px;
+        line-height: 50px;
+    }
+    .component-input:hover ~ .mem-img {
+        height: 250px;
+    }
+    .component-input:checked ~ .mem-img {
+        height: 250px;
+    }
+}
+@media (max-width: 820px) {
+    .container {
+        max-width: 400px;
+    }
+    body {
+        font-size: 14px;
+    }
+    .component-title {
+        height: 30px;
+        line-height: 30px;
+    }
+    .component-input:hover ~ .mem-img {
+        height: 150px;
+    }
+    .component-input:checked ~ .mem-img {
+        height: 150px;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        max-width: 200px;
+    }
+    body {
+        font-size: 10px;
+    }
+    .component-title {
+        height: 20px;
+        line-height: 20px;
+    }
+    .component-input:hover ~ .mem-img {
+        height: 110px;
+    }
+    .component-input:checked ~ .mem-img {
+        height: 110px;
+    }
 }
