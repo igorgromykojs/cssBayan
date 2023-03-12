@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +7,39 @@
     <link rel="stylesheet" href="style.css">
     <title>CSS Bayan</title>
 </head>
-
 <body>
     <div class="container">
         <h1>CSS Bayan</h1>
         <hr>
         <div class="component">
-            <label class="component-title" for="component_1"><div>Wow! What a beautiful day!</div><div class="plus">&#10006;</div></label>
-            <input type="radio" class="component-input" name="component" id="component_1">
-            <img src="wow.jpg" alt="wow" class="mem-img">
-            <hr>
-            <label class="component-title" for="component_2"><div>I have no idea what I'm doing</div><div class="plus">&#10006;</div></label>
-            <input type="radio" class="component-input" name="component" id="component_2">
-            <img src="no idea.jpg" alt="no idea" class="mem-img">
-            <hr>
-            <label class="component-title" for="component_3"><div>Have you seen Groot</div><div class="plus">&#10006;</div></label>
-            <input type="radio" class="component-input" name="component" id="component_3">
-            <img src="have you seen Groot.jpg" alt="Groot" class="mem-img">
-            <hr>
-            <label class="component-title" for="component_4"><div>Do you speak english</div><div class="plus">&#10006;</div></label>
-            <input type="radio" class="component-input" name="component" id="component_4">
-            <img src="do you speak english.jpg" alt="english" class="mem-img">
+            <div class="component-item">
+                <input type="radio" checked class="component-input" name="component" id="component_1">
+                <label class="component-title" for="component_1">Wow! What a beautiful day!</label>
+                <div class="plus">&#10006;</div>
+                <img src="wow.jpg" alt="wow" class="mem-img">
+                <hr>
+            </div>
+            <div class="component-item">
+                <input type="radio" class="component-input" name="component" id="component_2">
+                <label class="component-title" for="component_2">I have no idea what I'm doing</label>
+                <div class="plus">&#10006;</div>
+                <img src="no idea.jpg" alt="no idea" class="mem-img">
+                <hr>
+            </div>
+            <div class="component-item">
+                <input type="radio" class="component-input" name="component" id="component_3">
+                <label class="component-title" for="component_3">Have you seen Groot?</label>
+                <div class="plus">&#10006;</div>
+                <img src="have you seen Groot.jpg" alt="Groot" class="mem-img">
+                <hr>
+            </div>
+            <div class="component-item">
+                <input type="radio" class="component-input" name="component" id="component_4">
+                <label class="component-title" for="component_4">Do you speak English?</label>
+                <div class="plus">&#10006;</div>
+                <img src="do you speak english.jpg" alt="english" class="mem-img">
+            </div>
         </div>
     </div>
 </body>
-
 </html>
