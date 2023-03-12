@@ -1,4 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+*{
+    box-sizing: border-box;
+}
+
+hr {
+    margin: 0px;
+}
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+.component {
+    color: blue;
+}
+.component-title {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+}
+.component:hover {
+    color: black;
+}
+.component-input:hover + .mem-img {
+    display: block;
+}
+
+.component-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+}
+.component-input:checked + .mem-img {
+    display: block;
+}
+.mem-img {
+    display: none;
+    max-width: 70%;
+    margin: 0 auto 10px auto;
+}
+.mem-img:hover {
+    display: block;
+}
+.plus {
+    display: none;
+    transform: rotate(45deg);
+}
+
+.component:hover .plus{
+    display: inline;
 }
